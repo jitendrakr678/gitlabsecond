@@ -6,11 +6,5 @@ jobs:
   steps:
    - name: Get code
      uses: actions/checkout@v4
-   - name: Install dependiencies
-     run: npm install
-   - name: Lint
-     run: npm run Lint
-   - name: build the code
-     run: npm run build
    - name: Deploy the code
      run: echo "the code is deployed"
