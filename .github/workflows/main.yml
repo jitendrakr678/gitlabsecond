@@ -1,10 +1,11 @@
-name: Deployment execrise
-on: push
+on: [push]
 jobs:
- deploy:
-  runs-on: ubuntu-22.04 
+ build:
+  name: Hello world
+  runs-on: ubuntu-latest
   steps:
-   - name: Get code
-     uses: actions/checkout@v4
-   - name: Deploy the code
-     run: echo "the code is deployed"
+  - uses: actions/checkout@v2
+  - name: Write a multi-line message
+    run: |
+      echo This demo file shows a 
+      echo very basic and easy-to-understand workflow.
